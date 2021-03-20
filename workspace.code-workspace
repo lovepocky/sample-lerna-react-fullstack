@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "sample-lerna-react-fullstack/root",
+      "path": "."
+    },
+    {
+      "name": "sample-lerna-react-fullstack/front-react",
+      "path": "packages/front-react"
+    },
+    {
+      "name": "sample-lerna-react-fullstack/back-nest",
+      "path": "packages/back-nest"
+    }
+  ],
+  "settings": {
+    "jestrunner.codeLensSelector": "**/*.{test,spec,e2e-spec}.{js,jsx,ts,tsx}",
+    "files.watcherExclude": {
+      "**/target": true
+    }
+  },
+  "extensions": {
+    "recommendations": []
+  }
+}
