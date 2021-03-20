@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CounterDisplay } from './domains/sample/counter/counter.component';
+import { Counter } from './domains/sample/counter/counter.store';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -9,6 +11,20 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p>
+          <span>shared state</span>
+          <Counter.Provider initialState={10}>
+            <CounterDisplay></CounterDisplay>
+            <div>
+              {/* nested component */}
+              <CounterDisplay></CounterDisplay>
+            </div>
+          </Counter.Provider>
+          <span>another state</span>
+          <Counter.Provider initialState={1}>
+            <CounterDisplay></CounterDisplay>
+          </Counter.Provider>
         </p>
         <a
           className="App-link"
