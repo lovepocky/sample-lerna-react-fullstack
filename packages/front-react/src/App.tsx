@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { ComplexStateComponent } from './domains/sample/complex-state/complex-state.component';
+import { ComplexStateStore } from './domains/sample/complex-state/complex-state.store';
 import { CounterDisplay } from './domains/sample/counter/counter.component';
 import { Counter } from './domains/sample/counter/counter.store';
 import logo from './logo.svg';
@@ -25,6 +27,11 @@ function App() {
           <Counter.Provider initialState={1}>
             <CounterDisplay></CounterDisplay>
           </Counter.Provider>
+        </p>
+        <p>
+          <ComplexStateStore.Provider initialState={{ age: 30, count: 0, name: "init name" }}>
+            <ComplexStateComponent></ComplexStateComponent>
+          </ComplexStateStore.Provider>
         </p>
         <a
           className="App-link"
