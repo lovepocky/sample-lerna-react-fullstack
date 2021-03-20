@@ -14,7 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <p>
+        <div>
           <span>shared state</span>
           <Counter.Provider initialState={10}>
             <CounterDisplay></CounterDisplay>
@@ -27,12 +27,12 @@ function App() {
           <Counter.Provider initialState={1}>
             <CounterDisplay></CounterDisplay>
           </Counter.Provider>
-        </p>
-        <p>
+        </div>
+        <div>
           <ComplexStateStore.Provider initialState={{ age: 30, count: 0, name: "init name" }}>
             <ComplexStateComponent></ComplexStateComponent>
           </ComplexStateStore.Provider>
-        </p>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"

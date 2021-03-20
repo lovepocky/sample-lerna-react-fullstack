@@ -5,6 +5,8 @@ export function ComplexStateComponent() {
 
   return (
     <div>
+      <span>{JSON.stringify(store.hello.data)}</span>
+      <br />
       <span>{store.name}</span>
       <br />
       <span>{store.age}</span>
